@@ -1,0 +1,16 @@
+<div  class="mx-auto" style="max-width: 400px;">
+    <%= form_with url: calculate_price_path, remote: true do |form| %>
+        <h1>Area Price Calculator</h1>
+        <div class="field mb-3">
+          <%= form.label :sqft, class: "form-label" %><br />
+          <%= form.number_field :sqft, required: true, autofocus: true, min: 1, value: 1, class: "form-control" %>
+        </div>
+        <div class="field mb-3">
+          <%= form.label :'price per sqft', class: "form-label" %><br />
+          <%= form.number_field :pricesqft, required: true, autofocus: true, min: 1, value: 1, class: "form-control" %>
+        </div>
+        <div class="actions">
+          <%= form.submit "Calculate", class: "btn btn-primary" %>
+        </div>
+    <% end %>
+</div>
