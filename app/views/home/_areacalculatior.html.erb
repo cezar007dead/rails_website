@@ -1,5 +1,5 @@
 <div  class="mx-auto" style="max-width: 400px;">
-    <%= form_with url: calculate_price_path, remote: true do |form| %>
+    <%= form_for :area_price, url: calculate_price_path, remote: true do |form| %>
         <h1>Area Price Calculator</h1>
         <div class="field mb-3">
           <%= form.label :sqft, class: "form-label" %><br />
@@ -12,5 +12,6 @@
         <div class="actions">
           <%= form.submit "Calculate", class: "btn btn-primary" %>
         </div>
+        <div id="area-price"></div>
     <% end %>
 </div>

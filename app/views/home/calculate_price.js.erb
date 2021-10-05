@@ -1,1 +1,2 @@
-alert('<%= @results %>')
+var partial = "<%= j render partial: "home/area_price", locals: { area_price: @results } %>"
+document.getElementById("area-price").innerHTML = partial
